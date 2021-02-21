@@ -22,7 +22,7 @@ const mergeFunction = (objValue, srcValue) => {
     return undefined;
 };
 
-const mode = process.env.REACT_APP_MODE || 'edit';
+const mode = process.env.REACT_APP_MODE || 'readOnly';
 
 function App() {
     const classes = useStyles();
@@ -54,7 +54,7 @@ function App() {
             onEdit={onEdit}
             onCustomizationChanged={onCustomizationChanged}
             options={{
-                locale: 'fr',
+                locale: 'en',
                 // side: 'back',
                 apiKeys: {
                     giphy: process.env.REACT_APP_GIPHY
